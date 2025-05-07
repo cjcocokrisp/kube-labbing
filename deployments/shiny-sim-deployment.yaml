@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shiny-sim-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shiny-sim
+  template:
+    metadata:
+      labels:
+        app: shiny-sim
+    spec:
+      containers:
+      - image: ghcr.io/cjcocokrisp/shiny-sim:latest
+        name: shiny-sim
+        ports:
+        - containerPort: 3000
+        - containerPort: 8080
