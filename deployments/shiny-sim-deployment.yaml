@@ -20,5 +20,5 @@ spec:
         - containerPort: 8080
     volumes:
       - name: data
-        PersistantVolumeClaim:
+        persistentVolumeClaim:
           claimName: shiny-sim-pvc
