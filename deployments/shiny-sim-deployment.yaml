@@ -18,3 +18,5 @@ spec:
         ports:
         - containerPort: 3000
         - containerPort: 8080
+        PersistantVolumeClaim:
+          claimName: shiny-sim-pvc

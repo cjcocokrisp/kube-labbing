@@ -5,7 +5,15 @@ metadata:
 spec:
   selector: 
     app: shiny-sim
+  type: LoadBalancer
   ports:
-    - protocol: http
+    - name: frontend
+      protocol: TCP
       port: 3000
       targetPort: 3000
+      nodePort: 31110
+    - name: backend
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 31111
