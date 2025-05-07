@@ -18,7 +18,10 @@ spec:
         ports:
         - containerPort: 3000
         - containerPort: 8080
-    volumes:
-      - name: data
-        persistentVolumeClaim:
-          claimName: shiny-sim-pvc
+        volumeMounts:
+        - mountPath: /app/data
+          name: data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: shiny-sim-pvc
