@@ -10,9 +10,16 @@ metadata:
 spec:
   project: default
   desination:
+    name: in-cluster
     server: https://kubernetes.default.svc
     namespace: shiny-sim
   source:
     repoURL: https://github.com/cjcocokrisp/kube-labbing.git
     targetRevision: HEAD
     path: shiny-sim
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
