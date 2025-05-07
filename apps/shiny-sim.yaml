@@ -9,7 +9,7 @@ metadata:
     name: shiny-sim
 spec:
   project: default
-  desination:
+  destination:
     name: in-cluster
     server: https://kubernetes.default.svc
     namespace: shiny-sim
