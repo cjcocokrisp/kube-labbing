@@ -15,7 +15,7 @@ spec:
   project: default
   desintation:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: nginx-image-test
   source:
     repoURL: https://github.com/cjcocokrisp/kube-labbing.git
     targetRevision: HEAD
@@ -24,3 +24,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
