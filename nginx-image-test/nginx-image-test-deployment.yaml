@@ -4,6 +4,9 @@ metadata:
   name: nginx-image-test-deployment
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-image-test
   template:
     metadata:
       labels:
