@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-image-test
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: ngnix-image-test
+spec:
+  project: default
+  desintation:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  source:
+    repoURL: https://github.com/cjcocokrisp/kube-labbing.git
+    targetRevision: HEAD
+    path: nginx-image-test
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
