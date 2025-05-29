@@ -23,7 +23,7 @@ spec:
       chart: nginx
       helm:
         valueFiles:
-          - $values/nginx-image-test/values.yml
+          - $values/nginx-image-test/values.yaml
     - repoURL: https://github.com/cjcocokrisp/kube-labbing.git
       targetRevision: HEAD
       ref: values
