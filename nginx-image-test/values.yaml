@@ -1,0 +1,7 @@
+image:
+  registry: docker.io
+  repository: bitnami/nginx
+  tag: 1.18.0 
+env:
+  - name: ENVIRONMENT
+    value: production
