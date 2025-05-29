@@ -6,11 +6,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx-image-test-deployment
+      app: nginx-image-test
   template:
     metadata:
       labels:
-        app: nginx-image-test-deployment
+        app: nginx-image-test
     spec:
       containers:
       - image: nginx:1.19
