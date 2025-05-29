@@ -7,6 +7,10 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
   labels:
     name: ngnix-image-test
+  annotations:
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/image-list: nginx=nginx:latest
+    argocd-image-updater.argoproj.io/update-strategy: semve
 spec:
   project: default
   desintation:
