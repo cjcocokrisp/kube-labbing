@@ -4,7 +4,8 @@ metadata:
   name: shiny-sim-service
 spec:
   selector: 
-    app: shiny-sim
+    matchLabels:
+      app: shiny-sim
   type: LoadBalancer
   ports:
     - name: frontend
