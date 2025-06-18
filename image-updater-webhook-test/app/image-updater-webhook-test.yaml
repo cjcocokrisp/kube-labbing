@@ -4,7 +4,7 @@ metadata:
   name: image-updater-webhook-test
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: quay:quay.io/rh-ee-ccoco/webhooktest:1.x.x
+    argocd-image-updater.argoproj.io/image-list: quay.io/rh-ee-ccoco/webhooktest:1.x.x
     argocd-image-updater.argoproj.io/update-strategy: semver
     argocd-image-updater.argoproj.io/force-update: "false"
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
