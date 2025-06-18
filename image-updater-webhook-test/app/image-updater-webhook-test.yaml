@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: image-updater-webhook-test
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: quay:quay.io/cjcocokrisp/webhooktest:1.x.x
+    argocd-image-updater.argoproj.io/update-strategy: semver
+    argocd-image-updater.argoproj.io/force-update: "false"
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: in-cluster
+    namespace: argocd
+  project: default
+  source:
+      repoURL: https://github.com/cjcocokrisp/kube-labbing.git
+      targetRevision: main
+      path: image-updater-webhook-test/source
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
