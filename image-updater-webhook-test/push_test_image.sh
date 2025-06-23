@@ -17,6 +17,10 @@ if test "${TAG}" = ""; then
 	echo "!!  Usage: ./push_test_image.sh {TAG}"
 fi
 
+# update container so it is different the blank backup is
+# because macOS used BSD sed not GNU
+sed -E -i '' "s/v[0-9]+\.[0-9]+\.[0-9]+/v${TAG}/g" Containerfile
+
 # remove dummy container so you can create a new one
 # container may not have existed so seeing an error is ok
 sudo podman rm ${CONTAINER_NAME}
