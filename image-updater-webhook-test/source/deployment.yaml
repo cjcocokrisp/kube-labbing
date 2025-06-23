@@ -16,3 +16,6 @@ spec:
       - name: quayimage
         image: quay.io/rh-ee-ccoco/webhooktest:1.0.0
         imagePullPolicy: Always
+      - name: dockerimage
+	image: docker.io/cjcocokrisp/webhooktest:1.0.0
+	imagePullPolicy: Always
