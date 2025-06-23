@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: image-updater-webhook-test
+  name: image-updater-webhook-test-dcoker
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: image-updater-webhook-test 
+      app: image-updater-webhook-test-docker
   template:
     metadata:
       labels:
-        app: image-updater-webhook-test 
+        app: image-updater-webhook-test-docker
     spec:
       containers:
       - name: dockerimage
