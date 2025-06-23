@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-updater-webhook-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: image-updater-webhook-test 
+  template:
+    metadata:
+      labels:
+        app: image-updater-webhook-test 
+    spec:
+      containers:
+      - name: quayimage
+        image: quay.io/rh-ee-ccoco/webhooktest:1.0.0
+        imagePullPolicy: Always
