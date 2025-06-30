@@ -1,0 +1,12 @@
+FROM python:3.12-alpine
+
+WORKDIR /app
+
+COPY ./rand_str.py ./rand_str.py
+
+RUN echo "<html><body><h1>This is TestApp1 here is some random garbage:</h1><h2>$(python3 rand_str.py)</h2</body></html>" > index.html
+
+EXPOSE 8000
+
+CMD ["python3", "-m", "http.server", "8000"]
+
