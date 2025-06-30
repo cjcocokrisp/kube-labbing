@@ -1,4 +1,4 @@
 # Default values for test app
 images:
   testapp1: 
-    image: quay.io/rh-ee-ccoco/aiubug1:sha256:4422a15ff0b0a1a8e65f0bf13a5b306adf058e0185671610cea4148c1bd1f2c9
+    image: quay.io/rh-ee-ccoco/aiubug1@sha256:4422a15ff0b0a1a8e65f0bf13a5b306adf058e0185671610cea4148c1bd1f2c9
