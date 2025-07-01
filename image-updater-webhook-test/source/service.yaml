@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: image-updater-webhook-test-service
+  name: image-updater-webhook-test
 spec:
   selector:
     app: image-updater-webhook-test

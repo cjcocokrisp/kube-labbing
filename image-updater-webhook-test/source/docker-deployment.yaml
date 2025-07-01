@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: image-updater-webhook-test-dcoker
+  name: image-updater-webhook-test-docker
 spec:
   replicas: 1
   selector:
