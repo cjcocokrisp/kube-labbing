@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
-    name: shiny-sim-2
+    name: shiny-sim-3
 spec:
   project: default
   destination:
