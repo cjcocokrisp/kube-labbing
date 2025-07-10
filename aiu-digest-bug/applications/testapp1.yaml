@@ -5,6 +5,10 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myapp=quay.io/rh-ee-ccoco/aiubug1:latest
+    argocd-image-updater.argoproj.io/myapp.update-strategy: digest
+    argocd-image-updater.argoproj.io/myapp.helm.image-spec: images.myapp.image
 spec:
   destination:
     name: in-cluster
