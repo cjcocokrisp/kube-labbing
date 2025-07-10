@@ -8,7 +8,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: myapp=quay.io/rh-ee-ccoco/aiubug1:latest
     argocd-image-updater.argoproj.io/myapp.update-strategy: digest
-    argocd-image-updater.argoproj.io/myapp.helm.image-spec: images.myapp.image
+    argocd-image-updater.argoproj.io/myapp.helm.image-spec: images.testapp1.image
 spec:
   destination:
     name: in-cluster
