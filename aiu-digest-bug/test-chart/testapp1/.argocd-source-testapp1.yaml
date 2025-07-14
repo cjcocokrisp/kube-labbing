@@ -1,5 +1,5 @@
 helm:
   parameters:
   - name: images.testapp1.image
-    value: quay.io/rh-ee-ccoco/aiubug1:latest@sha256:6f2342f89937a4bac43f89ab2577d85d5be9cb89dea46f116cbc7b59faa90e0b
+    value: quay.io/rh-ee-ccoco/aiubug1:latest@sha256:8fc2a30e9bf7004a25e2009e84089d6e5706d7ebbf95b06d43e04b00e5b4be81
     forcestring: true
