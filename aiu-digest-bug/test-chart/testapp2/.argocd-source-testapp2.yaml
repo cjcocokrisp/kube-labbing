@@ -1,0 +1,5 @@
+helm:
+  parameters:
+  - name: images.testapp2.image
+    value: quay.io/rh-ee-ccoco/webhooktest:latest@sha256:7a6a8b8ab753b674d4a48110254e5fa5487ce7b7202271b430ff617d1ba08fca
+    forcestring: true
