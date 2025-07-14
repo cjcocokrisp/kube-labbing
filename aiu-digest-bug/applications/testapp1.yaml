@@ -9,6 +9,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: myapp=quay.io/rh-ee-ccoco/aiubug1:latest
     argocd-image-updater.argoproj.io/myapp.update-strategy: digest
     argocd-image-updater.argoproj.io/myapp.helm.image-spec: images.testapp1.image
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   destination:
     name: in-cluster
