@@ -1,6 +1,6 @@
 # Default values for test app
 images:
   testimage1: 
-    image: quay.io/rh-ee-ccoco/aiubug1@sha256:4422a15ff0b0a1a8e65f0bf13a5b306adf058e0185671610cea4148c1bd1f2c9
+    image: quay.io/rh-ee-ccoco/aiubug1:1.1.0
   testimage2:
-    image: quay.io/rh-ee-ccoco/webhooktest@sha256:6e07a32ed4a23ed9ffaf7c710219073790fb0d8315e342a5f5ab90d34073ba80
+    image: quay.io/rh-ee-ccoco/webhooktest:1.1.0

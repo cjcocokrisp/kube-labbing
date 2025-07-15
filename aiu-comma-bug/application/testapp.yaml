@@ -6,9 +6,9 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd-image-updater.argoproj.io/image-list: testimage1=quay.io/rh-ee-ccoco/aiubug1:latest,testimage2=quay.io/rh-ee-ccoco/webhooktest:latest
-    argocd-image-updater.argoproj.io/testimage1.update-strategy: digest
-    argocd-image-updater.argoproj.io/testimage2.update-strategy: digest
+    argocd-image-updater.argoproj.io/image-list: testimage1=quay.io/rh-ee-ccoco/aiubug1:v1.1.X,testimage2=quay.io/rh-ee-ccoco/webhooktest:v1.1.X
+    argocd-image-updater.argoproj.io/testimage1.update-strategy: semver
+    argocd-image-updater.argoproj.io/testimage2.update-strategy: semver
     argocd-image-updater.argoproj.io/testimage1.helm.image-spec: images.testimage1.image
     argocd-image-updater.argoproj.io/testimage2.helm.image-spec: images.testimage2.image
 spec:
