@@ -17,7 +17,7 @@ spec:
   source:
       repoURL: https://github.com/cjcocokrisp/kube-labbing.git
       targetRevision: main
-      path: aiu-digest-bug/test-chart/testapp1
+      path: aiu-comma-bug/chart/
   syncPolicy:
     automated:
       prune: true
