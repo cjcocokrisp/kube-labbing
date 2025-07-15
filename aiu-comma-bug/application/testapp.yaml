@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: testapp
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: testimage1=quay.io/rh-ee-ccoco/aiubug1:latest,testimage2=quay.io/rh-ee-ccoco/webhooktest:latest
+    argocd-image-updater.argoproj.io/myapp.update-strategy: digest
+    argocd-image-updater.argoproj.io/myapp.helm.image-spec: images.testapp1.image
+spec:
+  destination:
+    name: in-cluster
+    namespace: argocd
+  project: default
+  source:
+      repoURL: https://github.com/cjcocokrisp/kube-labbing.git
+      targetRevision: main
+      path: aiu-digest-bug/test-chart/testapp1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
