@@ -1,4 +1,0 @@
-kustomize:
-  images:
-  - quay.io/rh-ee-ccoco/webhooktest:1.7.1
-  - docker.io/cjcocokrisp/webhooktest:1.2.0

@@ -1,4 +1,3 @@
 resources:
   - quay-deployment.yaml
-  - docker-deployment.yaml
   - service.yaml

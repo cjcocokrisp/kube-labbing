@@ -25,7 +25,9 @@ fi
 
 # update container so it is different the blank backup is
 # because macOS used BSD sed not GNU
-# sed -E -i '' "s/v[0-9]+\.[0-9]+\.[0-9]+/v${TAG}/g" ${CONTAINER_FILE}
+if test "${REPO}" = "quay.io/rh-ee-ccoco/webhooktest"; then 
+	sed -E -i '' "s/v[0-9]+\.[0-9]+\.[0-9]+/v${TAG}/g" ${CONTAINER_FILE}/Containerfile
+fi
 
 # remove dummy container so you can create a new one
 # container may not have existed so seeing an error is ok
