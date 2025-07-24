@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - quay.io/rh-ee-ccoco/webhooktest:1.4.0
