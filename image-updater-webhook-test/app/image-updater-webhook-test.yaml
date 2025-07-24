@@ -7,6 +7,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: quay.io/rh-ee-ccoco/webhooktest:1.x.x
     argocd-image-updater.argoproj.io/update-strategy: semver
     argocd-image-updater.argoproj.io/force-update: "false"
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
