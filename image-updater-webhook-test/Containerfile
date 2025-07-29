@@ -2,7 +2,7 @@ FROM python:3.12-alpine
 
 WORKDIR /app
 
-RUN echo "<html><body><h1>Container is running on v1.4.0!</h1></body></html>" > index.html
+RUN echo "<html><body><h1>Container is running on v1.1.0!</h1></body></html>" > index.html
 
 EXPOSE 8000
 
